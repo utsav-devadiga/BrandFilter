@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Brand Filter</string>
+    <string name="search_for_brands">Search for Brands</string>
+    <string name="add_filters">ADD FILTERS</string>
+    <string name="apply_filters">APPLY FILTER</string>
+    <string name="clear">Clear</string>
+</resources>

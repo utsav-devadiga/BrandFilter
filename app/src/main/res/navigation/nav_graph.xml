@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.brands.fliter.screens.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_accountNumberFragment"
+            app:destination="@id/accountNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.brands.fliter.screens.LocationFragment"
+        android:label="Select Location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/brandFragment"
+        android:name="com.brands.fliter.screens.BrandFragment"
+        android:label="Select Brand"
+        tools:layout="@layout/fragment_brand">
+        <action
+            android:id="@+id/action_brandFragment_to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountNumberFragment"
+        android:name="com.brands.fliter.screens.AccountNumberFragment"
+        android:label="Select Account Number"
+        tools:layout="@layout/fragment_account_number" >
+        <action
+            android:id="@+id/action_accountNumberFragment_to_brandFragment"
+            app:destination="@id/brandFragment" />
+    </fragment>
+</navigation>
